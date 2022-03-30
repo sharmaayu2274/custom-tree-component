@@ -1,0 +1,50 @@
+  
+.codingayu-tree-container {
+  list-style: none;
+  padding-left: 0.9rem;
+  /* line-height: 0%; */
+}
+
+.codingayu-tree-node {
+  padding: 0rem 0.75rem;
+  /* padding-top: 1rem;
+  padding-right: 0.35rem; */
+}
+
+.codingayu-tree-toggler {
+  cursor: pointer;
+}
+.codingayu-tree-toggler.active {
+  transform: rotate(90deg);
+}
+
+.codingayu-tree-head {
+  font-size: 0.82rem;
+  padding-top: 0.5rem;
+  padding-right: 0;
+  padding-left: 0.4rem;
+  cursor: pointer;
+}
+
+.node-active {
+  color:dodgerblue;
+}
+.no-child{
+  color:white !important;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.container {
+  display: flex;
+}
