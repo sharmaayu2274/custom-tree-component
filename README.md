@@ -36,6 +36,7 @@ After installation just import the module in your react component
 import {Tree, TreeDetail} from 'codingayu-tree-node'
 ```
 and use the component to render tree like 
+
 ```
 import {Tree, TreeNodeDetail} from 'codingayu-tree-node';
 import {useEffect,useState} from 'react';
