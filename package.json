@@ -7,22 +7,28 @@
     "components",
     "tree-component"
   ],
-  "version": "0.1.0",
+  "version": "0.2.31",
   "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/customized-treenode --out-dir dist --copy-files",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/customized-treenode --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +51,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sharmaayu2274/custom-tree-component"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "resolutions": {
+    "componentLibrary/react": "^17.0.2",
+    "componentLibrary/react-dom": "^17.0.2"
   }
 }

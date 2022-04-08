@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Tree from './customized-treenode/node';
 import React,{useState, useEffect} from 'react';
